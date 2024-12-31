@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  main {
+    @apply min-h-screen
+  }
+
+  a, button {
+    outline: none;
+  }
+
+  h1 {
+    @apply font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-6xl
+  }
+
+  h2 {
+    @apply font-semibold text-3xl md:text-4xl
+  }
+
+  h3 {
+    @apply text-lg font-semibold
+  }
+
+  article {
+    @apply text-zinc-300 text-sm md:text-base
+  }
+}
+
+@layer components {
+  .text-box {
+    @apply w-full py-3 px-2 rounded focus:outline-none bg-white/5 border border-zinc-600 text-zinc-200 placeholder-zinc-500 focus:border-zinc-400 appearance-none disabled:bg-zinc-200 disabled:opacity-50 disabled:pointer-events-none
+  }
+
+  .container {
+    @apply w-full max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8
+  }
+
+  .btn {
+    @apply outline-none shadow-md transition-all duration-500 rounded hover:shadow-lg font-medium disabled:opacity-60 disabled:pointer-events-none
+  }
+
+  .lime {
+    @apply bg-lime-600 hover:bg-lime-700 text-white font-medium
+  }
+
+  .spray {
+    @apply hover:bg-spray-600 bg-spray-700 text-white
+  }
+
+  .spray-dark {
+    @apply hover:bg-spray-700 bg-spray-900 text-white
+  }
+
+  .chestnut {
+    @apply hover:bg-chestnut-500 bg-chestnut-600 text-white
+  }
+}

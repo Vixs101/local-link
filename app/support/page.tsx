@@ -23,7 +23,7 @@ const initialMessages: Message[] = [
   },
 ]
 
-export function SupportChat() {
+export default function SupportChat() {
   const [messages, setMessages] = useState<Message[]>(initialMessages)
   const [newMessage, setNewMessage] = useState("")
   const [isAtBottom, setIsAtBottom] = useState(true)
